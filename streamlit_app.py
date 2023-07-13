@@ -1,4 +1,4 @@
-
+import requests
 import streamlit as st
 
 def consume_url(message):
