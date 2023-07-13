@@ -8,7 +8,7 @@ def consume_url(message):
     body = {
         "message": message
     }
-    headers = {'Content-Type': 'application/json', 'x-api-key', 'LF1LAK6AKF9Zk1gJMRWKZ5ERJ2oMraAf6V58owSt'}
+    headers = {'Content-Type': 'application/json', 'x-api-key': 'LF1LAK6AKF9Zk1gJMRWKZ5ERJ2oMraAf6V58owSt'}
     response = requests.post(url, headers=headers, data=json.dumps(body))
     
     if response.status_code == 200:
