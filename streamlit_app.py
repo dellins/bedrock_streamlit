@@ -1,5 +1,7 @@
 import requests
+import json
 import streamlit as st
+
 
 def consume_url(message):
     url = "https://y9s346bpuj.execute-api.us-east-1.amazonaws.com/default/bedrock_opensearch_demo"
