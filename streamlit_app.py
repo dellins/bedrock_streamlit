@@ -33,6 +33,7 @@ if prompt := st.chat_input():
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
     response = consume_url(prompt) #openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=st.session_state.messages)
-    msg = response.body.message
+    print(response)
+    msg = response['body']['message']
     st.session_state.messages.append(msg)
-    st.chat_message("assistant").write(msg.content)
+    st.chat_message("assistant").write(msg)
