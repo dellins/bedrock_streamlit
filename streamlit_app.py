@@ -14,9 +14,10 @@ def consume_url(message):
     if response.status_code == 200:
         data = response.json()
 
-        return data
         # Process the data as needed
         print(data)
+
+        return data
     else:
         print("Failed to fetch data. Status code:", response.status_code)
 
