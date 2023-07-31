@@ -30,7 +30,7 @@ for msg in st.session_state.messages:
     st.chat_message(msg["role"]).write(msg["content"])
 
 if prompt := st.chat_input():
-    history = '\n'.join([f'{msg["role"]}: {msg["content"]}' for msg in st.session_state.messages])
+    history = '\n'.join([f'{msg["role"]}: {msg["content"].trim()}' for msg in st.session_state.messages])
     print(history)
     st.session_state.messages.append({"role": "user", "content": prompt})
     st.chat_message("user").write(prompt)
