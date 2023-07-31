@@ -22,7 +22,7 @@ def consume_url(message, history):
     else:
         print("Failed to fetch data. Status code:", response.status_code)
 
-st.title("💬 Supply Chain Assistant.")
+st.title("💬 Supply Chain Assistant")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
