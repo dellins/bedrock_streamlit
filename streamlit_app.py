@@ -22,6 +22,7 @@ def consume_url(message, history):
     else:
         print("Failed to fetch data. Status code:", response.status_code)
 ow_logo = "https://raw.githubusercontent.com/dellins/bedrock_streamlit/master/Blue_Logo.svg"
+user_logo = "https://raw.githubusercontent.com/dellins/bedrock_streamlit/master/person_outline.svg"
 
 
 st.title("💬 Ask Steve")
@@ -29,7 +30,7 @@ if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
 for msg in st.session_state.messages:
-    st.chat_message(msg["role"],avatar=ow_logo if (msg["role"] == "assistant") else msg["role"]).write(msg["content"])
+    st.chat_message(msg["role"],avatar=ow_logo if (msg["role"] == "assistant") else user_logo).write(msg["content"])
 
 if prompt := st.chat_input():
     history = '' #'\n'.join([f'{msg["role"]}: {msg["content"].strip()}' for msg in st.session_state.messages])
