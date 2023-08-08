@@ -22,7 +22,7 @@ def consume_url(message, history):
     else:
         print("Failed to fetch data. Status code:", response.status_code)
 ow_logo = "https://raw.githubusercontent.com/dellins/bedrock_streamlit/master/Blue_Logo.svg"
-user_logo = "https://raw.githubusercontent.com/dellins/bedrock_streamlit/master/person_outline.svg"
+user_logo = "https://raw.githubusercontent.com/dellins/bedrock_streamlit/master/Avatar.svg"
 
 
 st.title("💬 Ask Steve")
