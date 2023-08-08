@@ -36,10 +36,10 @@ if prompt := st.chat_input():
     history = '' #'\n'.join([f'{msg["role"]}: {msg["content"].strip()}' for msg in st.session_state.messages])
     #print(history)
     st.session_state.messages.append({"role": "user", "content": prompt})
-    st.chat_message("user").write(prompt)
+    st.chat_message("user", avatar=user_logo).write(prompt)
     
     response = consume_url(prompt, history) #openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=st.session_state.messages)
     #print(response)
     msg =  {"role": "assistant", "content": response['body']['message']}
     st.session_state.messages.append(msg)
-    st.chat_message("assistant").write(msg['content'])
+    st.chat_message("assistant", avatar=ow_logo).write(msg['content'])
