@@ -25,7 +25,7 @@ ow_logo = "https://raw.githubusercontent.com/dellins/bedrock_streamlit/master/Bl
 user_logo = "https://raw.githubusercontent.com/dellins/bedrock_streamlit/master/Avatar.svg"
 
 
-st.title("💬 Ask Steve")
+st.title("💬 Supply Chain Assistant")
 if "messages" not in st.session_state:
     st.session_state["messages"] = [{"role": "assistant", "content": "How can I help you?"}]
 
